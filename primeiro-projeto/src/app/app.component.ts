@@ -3,19 +3,26 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
 @Component({
   selector: 'app-root',
   template: `
-    <app-title *ngIf="destruir"></app-title>
-    <br>
-    <button (click)="destruirComponent()">Destruir componente</button>
-    <router-outlet></router-outlet>
+    <!-- <app-data-binding></app-data-binding> -->
+    <!-- <app-diretivas-estruturais></app-diretivas-estruturais> -->
+    <!-- <app-diretivas-atributos>
+      <h1>Aulas de diretiva atributos</h1>
+      <hr>
+    </app-diretivas-atributos>
+    <app-diretivas-atributos>
+      <h1>Felipe Silva</h1>
+      <hr>
+    </app-diretivas-atributos>
+    <router-outlet></router-outlet> -->
+    <app-diretivas-atributos></app-diretivas-atributos>
   `
 })
-export class AppComponent {
-  public valor: number = 1;
-  public destruir: boolean = true;
-
+export class AppComponent implements OnInit {
   constructor() { }
 
- public destruirComponent(): void {
-    this.destruir = false;
- }
+  ngOnInit(): void {
+
+  }
+
+
 }
