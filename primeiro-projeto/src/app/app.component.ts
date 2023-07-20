@@ -14,7 +14,8 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
       <hr>
     </app-diretivas-atributos>
     <router-outlet></router-outlet> -->
-    <app-diretivas-atributos></app-diretivas-atributos>
+    <!-- <app-diretivas-atributos></app-diretivas-atributos> -->
+    <app-new-component></app-new-component>
   `
 })
 export class AppComponent implements OnInit {
