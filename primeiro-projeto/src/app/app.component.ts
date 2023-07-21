@@ -15,15 +15,31 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
     </app-diretivas-atributos>
     <router-outlet></router-outlet> -->
     <!-- <app-diretivas-atributos></app-diretivas-atributos> -->
-    <app-new-component></app-new-component>
+    <!-- <app-new-component></app-new-component> -->
+    <!-- <app-input [contador]="addValue" [item]="item"></app-input>
+    <button (click)="add()">Add</button> -->
+    <ng-template [ngIf]="getDados">
+      <h1>{{ getDados.nome }} - {{ getDados.idade }}</h1>
+    </ng-template>
+    <app-output (enviarDados)="setDados($event)"></app-output>
   `
 })
 export class AppComponent implements OnInit {
+  public addValue: number = 20;
+  public item: {nome: string, idade: number} = {nome: 'Felipe', idade: 19};
+  public getDados: {nome: string, idade: number} | undefined;
+
   constructor() { }
 
   ngOnInit(): void {
 
   }
 
+  public add() {
+    this.addValue += 1;
+  }
 
+  public setDados(data: {nome: string, idade: number}): void {
+    this.getDados = data;
+  }
 }
