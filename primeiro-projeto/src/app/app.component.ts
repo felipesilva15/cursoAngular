@@ -18,10 +18,12 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
     <!-- <app-new-component></app-new-component> -->
     <!-- <app-input [contador]="addValue" [item]="item"></app-input>
     <button (click)="add()">Add</button> -->
-    <ng-template [ngIf]="getDados">
+    <!-- <ng-template [ngIf]="getDados">
       <h1>{{ getDados.nome }} - {{ getDados.idade }}</h1>
     </ng-template>
-    <app-output (enviarDados)="setDados($event)"></app-output>
+    <app-output (enviarDados)="setDados($event)"></app-output> -->
+    <app-food-list></app-food-list>
+    <app-food-add></app-food-add>
   `
 })
 export class AppComponent implements OnInit {
