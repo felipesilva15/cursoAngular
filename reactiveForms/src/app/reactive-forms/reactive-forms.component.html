@@ -1,0 +1,24 @@
+<form [formGroup]="cadastroForm" (ngSubmit)="submitForm()">
+    <label>Nome </label>
+    <input type="text" formControlName="firstName">
+    <span *ngIf="cadastroForm.get('firstName')?.errors && (cadastroForm.get('firstName')?.dirty || cadastroForm.get('firstName')?.touched)">
+        Informe o nome
+    </span>
+
+    <br>
+
+    <label>Sobrenome</label>
+    <input type="text" formControlName="lastName" minlength="3">
+    <span *ngIf="cadastroForm.get('lastName')?.errors && (cadastroForm.get('lastName')?.dirty || cadastroForm.get('lastName')?.touched)">
+        O campo deve ter no mínimo 
+        {{ cadastroForm.get('lastName')?.errors?.['minlength']?.requiredLength }}
+        dígitos e você digitou 
+        {{ cadastroForm.get('lastName')?.errors?.['minlength']?.actualLength }}
+        
+    </span>
+
+    <br>
+    <br>
+
+    <button [disabled]="cadastroForm.invalid">Enviar</button>
+</form>

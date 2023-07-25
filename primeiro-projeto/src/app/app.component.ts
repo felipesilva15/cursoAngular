@@ -22,8 +22,9 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
       <h1>{{ getDados.nome }} - {{ getDados.idade }}</h1>
     </ng-template>
     <app-output (enviarDados)="setDados($event)"></app-output> -->
-    <app-food-list></app-food-list>
-    <app-food-add></app-food-add>
+    <!-- <app-food-list></app-food-list>
+    <app-food-add></app-food-add> -->
+    <app-forms></app-forms>
   `
 })
 export class AppComponent implements OnInit {
