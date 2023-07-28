@@ -4,7 +4,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 // Components
 import { AppComponent } from './app.component';
 import { BankingComponent } from './shared/banking/banking.component';
-import { ListComponent } from './shared/investments/list/list.component';
+import { ListComponent } from './shared/investments/components/list/list.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
