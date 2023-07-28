@@ -6,9 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'testeUnitario';
-
-  public soma(n1: number, n2: number): number {
-    return n1 + n2;
-  }
 }

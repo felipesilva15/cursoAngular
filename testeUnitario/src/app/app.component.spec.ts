@@ -1,6 +1,10 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+
+// Components
 import { AppComponent } from './app.component';
+import { BankingComponent } from './shared/banking/banking.component';
+import { ListComponent } from './shared/investments/list/list.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -9,7 +13,9 @@ describe('AppComponent', () => {
         RouterTestingModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        BankingComponent,
+        ListComponent
       ],
     }).compileComponents();
   });
@@ -18,30 +24,5 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
-  });
-
-  it(`should have as title 'testeUnitario'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('testeUnitario');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('testeUnitario app is running!');
-  });
-
-  it(`Testando função de soma()`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.soma(1, 1)).toEqual(2);
-  });
-
-  it(`Testando função de soma() retornando um valor errado`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.soma(1, 2)).not.toEqual(2);
   });
 });
